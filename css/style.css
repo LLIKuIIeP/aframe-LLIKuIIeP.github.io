@@ -457,6 +457,15 @@ body {
   display: block;
 }
 
+/* Отзывы */
+
+.review {
+	background-color:#444444;
+}
+/* Отзывы */
+
+
+
 /* Адаптивность для мобильных устройств */
 @media (max-width: 768px) {
   .map {
