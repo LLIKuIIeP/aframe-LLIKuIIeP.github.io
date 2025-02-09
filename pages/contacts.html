@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../css/style.css" />
+		<title>Стоимость</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header class="header">
+				<h1 class="header__title">
+					<img class="header__icon" src="../img/home.svg" alt="Icon" />
+					A-Frame | Дом отдыха
+				</h1>
+				<p class="header__text">
+					Мы предлагаем вам современный и комфортный A-Frame с баней и купелью
+				</p>
+				<!-- Навигационное меню -->
+				<nav class="nav">
+					<ul class="nav__list">
+						<li class="nav__item">
+							<a href="../index.html" class="nav__link">Главная</a>
+						</li>
+					<ul class="nav__list">
+						<li class="nav__item">
+							<a href="../pages/price.html" class="nav__link">Стоимость</a>
+						</li>
+						<li class="nav__item">
+							<a href="../pages/dates.html" class="nav__link">Свободные даты</a>
+						</li>
+						<li class="nav__item">
+							<a href="../pages/photos.html" class="nav__link">Фотографии</a>
+						</li>
+						<li class="nav__item">
+							<a href="../pages/location.html" class="nav__link"
+								>Как добраться</a
+							>
+						</li>
+						<li class="nav__item">
+							<a href="../pages/reviews.html" class="nav__link">Отзывы</a>
+						</li>
+						<li class="nav__item">
+							<a href="../pages/contacts.html" class="nav__link">Контакты</a>
+						</li>
+						<li class="nav__item nav__item--dropdown">
+							<a href="../pages/programs.html" class="nav__link">Программы</a>
+							<ul class="nav__dropdown">
+								<li class="nav__dropdown-item">
+									<a href="../pages/proposal.html" class="nav__dropdown-link"
+										>Предложение руки и сердца</a
+									>
+								</li>
+								<li class="nav__dropdown-item">
+									<a href="../pages/romantic.html" class="nav__dropdown-link"
+										>Романтическое свидание</a
+									>
+								</li>
+								<li class="nav__dropdown-item">
+									<a href="../pages/birthday.html" class="nav__dropdown-link"
+										>День рождения</a
+									>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+			</header>
+
+		<title>Контакты</title>
+		<style>
+			/* Основные стили для раздела контактов */
+			.contact {
+				max-width: 600px;
+				margin: 0 auto;
+				padding: 40px 20px;
+				background-color: #f9f9f9;
+				border-radius: 15px;
+				box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+				text-align: center;
+			}
+
+			.contact__list {
+				list-style: none;
+				padding: 0;
+				margin: 0;
+				display: flex;
+				justify-content: center;
+				gap: 20px;
+				flex-wrap: wrap;
+			}
+
+			.contact__item {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+
+			.contact__link {
+				display: inline-block;
+				padding: 10px;
+				background-color: #007bff;
+				border-radius: 50%;
+				transition: background-color 0.3s, transform 0.3s;
+			}
+
+			.contact__link:hover {
+				background-color: #0056b3;
+				transform: translateY(-5px);
+			}
+
+			.contact__icon {
+				width: 24px;
+				height: 24px;
+				vertical-align: middle;
+			}
+
+			/* Адаптивность для мобильных устройств */
+			@media (max-width: 480px) {
+				.contact__list {
+					gap: 15px;
+				}
+
+				.contact__link {
+					padding: 8px;
+				}
+
+				.contact__icon {
+					width: 20px;
+					height: 20px;
+				}
+			}
+		</style>
+
+			<main class="main">
+				<div class="contact">
+					<ul class="contact__list">
+						<li class="contact__item">
+							<a
+								class="contact__link"
+								target="_blank"
+								href="https://t.me/mrpencel"
+							>
+								<img
+									class="contact__icon"
+									src="../img/icon/05.svg"
+									alt="Telegram"
+								/>
+							</a>
+						</li>
+						<li class="contact__item">
+							<a
+								class="contact__link"
+								target="_blank"
+								href="https://vk.com/mr.pencel"
+							>
+								<img class="contact__icon" src="../img/icon/06.svg" alt="VK" />
+							</a>
+						</li>
+						<li class="contact__item">
+							<a
+								class="contact__link"
+								target="_blank"
+								href="https://wa.me/79152563969"
+							>
+								<img
+									class="contact__icon"
+									src="../img/icon/07.svg"
+									alt="WhatsApp"
+								/>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</main>
+
+			<footer class="footer">
+				<div class="footer__content">
+					<span class="footer__text"
+						>Информация на сайте не является публичной офертой, которая
+						определяется Статьёй 437 ГК РФ. Copyright © 2024</span
+					>
+				</div>
+			</footer>
+		</div>
+	</body>
+</html>

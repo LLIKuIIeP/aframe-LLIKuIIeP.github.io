@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../css/style.css" />
+		<title>Стоимость</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header class="header">
+				<h1 class="header__title">
+					<img class="header__icon" src="../img/home.svg" alt="Icon" />
+					A-Frame | Дом отдыха
+				</h1>
+				<p class="header__text">
+					Мы предлагаем вам современный и комфортный A-Frame с баней и купелью
+				</p>
+				<!-- Навигационное меню -->
+				<nav class="nav">
+					<ul class="nav__list">
+						<li class="nav__item">
+							<a href="../index.html" class="nav__link">Главная</a>
+						</li>
+					<ul class="nav__list">
+						<li class="nav__item">
+							<a href="../pages/price.html" class="nav__link">Стоимость</a>
+						</li>
+						<li class="nav__item">
+							<a href="../pages/dates.html" class="nav__link">Свободные даты</a>
+						</li>
+						<li class="nav__item">
+							<a href="../pages/photos.html" class="nav__link">Фотографии</a>
+						</li>
+						<li class="nav__item">
+							<a href="../pages/location.html" class="nav__link"
+								>Как добраться</a
+							>
+						</li>
+						<li class="nav__item">
+							<a href="../pages/reviews.html" class="nav__link">Отзывы</a>
+						</li>
+						<li class="nav__item">
+							<a href="../pages/contacts.html" class="nav__link">Контакты</a>
+						</li>
+						<li class="nav__item nav__item--dropdown">
+							<a href="../pages/programs.html" class="nav__link">Программы</a>
+							<ul class="nav__dropdown">
+								<li class="nav__dropdown-item">
+									<a href="../pages/proposal.html" class="nav__dropdown-link"
+										>Предложение руки и сердца</a
+									>
+								</li>
+								<li class="nav__dropdown-item">
+									<a href="../pages/romantic.html" class="nav__dropdown-link"
+										>Романтическое свидание</a
+									>
+								</li>
+								<li class="nav__dropdown-item">
+									<a href="../pages/birthday.html" class="nav__dropdown-link"
+										>День рождения</a
+									>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+			</header>
+
+	<head>
+		<meta charset="UTF-8" />
+		<title>Свободные даты</title>
+		<style>
+			/* Стили для календаря */
+			.calendar {
+				max-width: 600px;
+				margin: 0 auto;
+				padding: 20px;
+				background-color: #f9f9f9;
+				border-radius: 10px;
+				box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+			}
+
+			.calendar__header {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				margin-bottom: 20px;
+			}
+
+			.calendar__month {
+				font-size: 24px;
+				font-weight: bold;
+				color: #333;
+			}
+
+			.calendar__days {
+				display: grid;
+				grid-template-columns: repeat(7, 1fr);
+				gap: 10px;
+			}
+
+			.calendar__day {
+				padding: 10px;
+				text-align: center;
+				border-radius: 5px;
+				cursor: pointer;
+				transition: background-color 0.3s;
+			}
+
+			.calendar__day.past {
+				background-color: #e0e0e0;
+				color: #999;
+				cursor: not-allowed;
+			}
+
+			.calendar__day.available {
+				background-color: #d4edda;
+				color: #155724;
+			}
+
+			.calendar__day.booked {
+				background-color: #f8d7da;
+				color: #721c24;
+			}
+
+			.calendar__day:hover:not(.past) {
+				background-color: #007bff;
+				color: #fff;
+			}
+
+			/* Стили для панели администратора */
+			.admin-panel {
+				position: fixed;
+				top: 20px;
+				right: 20px;
+				z-index: 1000;
+			}
+
+			.admin-panel__login {
+				padding: 8px 16px;
+				background-color: #007bff;
+				color: #fff;
+				border: none;
+				border-radius: 5px;
+				cursor: pointer;
+			}
+
+			.admin-panel__login:hover {
+				background-color: #0056b3;
+			}
+
+			.admin-panel__input {
+				display: none;
+				margin-top: 10px;
+			}
+
+			.admin-panel__input input {
+				padding: 8px;
+				border: 1px solid #ccc;
+				border-radius: 5px;
+			}
+
+			.admin-panel__input button {
+				padding: 8px 16px;
+				background-color: #28a745;
+				color: #fff;
+				border: none;
+				border-radius: 5px;
+				cursor: pointer;
+			}
+
+			.admin-panel__input button:hover {
+				background-color: #218838;
+			}
+		</style>
+	</head>
+	<body>
+
+			<main class="main">
+				<div class="calendar">
+					<div class="calendar__header">
+						<button id="prevMonth">←</button>
+						<div class="calendar__month" id="currentMonth"></div>
+						<button id="nextMonth">→</button>
+					</div>
+					<div class="calendar__days" id="calendarDays"></div>
+				</div>
+			</main>
+
+			<!-- Панель администратора -->
+			<div class="admin-panel">
+				<button class="admin-panel__login" id="loginButton">Вход</button>
+				<div class="admin-panel__input" id="adminInput">
+					<input
+						type="password"
+						id="adminPassword"
+						placeholder="Введите пароль"
+					/>
+					<button id="submitPassword">OK</button>
+				</div>
+			</div>
+
+			<footer class="footer">
+				<div class="footer__content">
+					<span class="footer__text"
+						>Информация на сайте не является публичной офертой, которая
+						определяется Статьёй 437 ГК РФ. Copyright © 2024</span
+					>
+				</div>
+			</footer>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+		<script>
+			// Данные для календаря
+			const calendarDays = document.getElementById('calendarDays')
+			const currentMonthElement = document.getElementById('currentMonth')
+			const prevMonthButton = document.getElementById('prevMonth')
+			const nextMonthButton = document.getElementById('nextMonth')
+			const loginButton = document.getElementById('loginButton')
+			const adminInput = document.getElementById('adminInput')
+			const adminPasswordInput = document.getElementById('adminPassword')
+			const submitPasswordButton = document.getElementById('submitPassword')
+
+			let currentDate = new Date()
+			let isAdmin = false
+
+			// Занятые даты (для примера)
+			let bookedDates = []
+
+			// Хэш пароля (SHA-256 от "admin123")
+			const passwordHash =
+				'240be518fabd2724ddb6f04eeb1da5967448d7e831c08c8fa822809f74c720a9'
+
+			// Функция для хэширования пароля
+			async function hashPassword(password) {
+				const encoder = new TextEncoder()
+				const data = encoder.encode(password)
+				const hashBuffer = await crypto.subtle.digest('SHA-256', data)
+				const hashArray = Array.from(new Uint8Array(hashBuffer))
+				return hashArray
+					.map(byte => byte.toString(16).padStart(2, '0'))
+					.join('')
+			}
+
+			// Функция для отображения календаря
+			function renderCalendar(date) {
+				const year = date.getFullYear()
+				const month = date.getMonth()
+				const firstDay = new Date(year, month, 1)
+				const lastDay = new Date(year, month + 1, 0)
+				const daysInMonth = lastDay.getDate()
+				const startDay = firstDay.getDay() === 0 ? 6 : firstDay.getDay() - 1 // Коррекция для понедельника
+
+				currentMonthElement.textContent = `${date.toLocaleString('ru', {
+					month: 'long',
+				})} ${year}`
+
+				let daysHTML = ''
+				for (let i = 0; i < startDay; i++) {
+					daysHTML += `<div class="calendar__day"></div>`
+				}
+
+				for (let i = 1; i <= daysInMonth; i++) {
+					const dayDate = new Date(year, month, i)
+					const isPast = dayDate < new Date(new Date().setHours(0, 0, 0, 0))
+					const isBooked = bookedDates.includes(
+						dayDate.toISOString().split('T')[0]
+					)
+
+					let dayClass = 'calendar__day'
+					if (isPast) {
+						dayClass += ' past'
+					} else if (isBooked) {
+						dayClass += ' booked'
+					} else {
+						dayClass += ' available'
+					}
+
+					daysHTML += `<div class="${dayClass}" data-date="${
+						dayDate.toISOString().split('T')[0]
+					}">${i}</div>`
+				}
+
+				calendarDays.innerHTML = daysHTML
+
+				// Обработка кликов для администратора
+				if (isAdmin) {
+					const days = document.querySelectorAll('.calendar__day:not(.past)')
+					days.forEach(day => {
+						day.addEventListener('click', () => {
+							const date = day.getAttribute('data-date')
+							if (bookedDates.includes(date)) {
+								bookedDates = bookedDates.filter(d => d !== date)
+								day.classList.remove('booked')
+								day.classList.add('available')
+							} else {
+								bookedDates.push(date)
+								day.classList.remove('available')
+								day.classList.add('booked')
+							}
+						})
+					})
+				}
+			}
+
+			// Переключение месяцев
+			prevMonthButton.addEventListener('click', () => {
+				currentDate.setMonth(currentDate.getMonth() - 1)
+				renderCalendar(currentDate)
+			})
+
+			nextMonthButton.addEventListener('click', () => {
+				currentDate.setMonth(currentDate.getMonth() + 1)
+				renderCalendar(currentDate)
+			})
+
+			// Панель администратора
+			loginButton.addEventListener('click', () => {
+				adminInput.style.display = 'flex'
+			})
+
+			submitPasswordButton.addEventListener('click', async () => {
+				const inputPassword = adminPasswordInput.value
+				const hashedPassword = await hashPassword(inputPassword)
+
+				if (hashedPassword === passwordHash) {
+					isAdmin = true
+					adminInput.style.display = 'none'
+					renderCalendar(currentDate)
+				} else {
+					alert('Неверный пароль')
+				}
+			})
+
+			// Инициализация календаря
+			renderCalendar(currentDate)
+		</script>
+	</body>
+</html>
