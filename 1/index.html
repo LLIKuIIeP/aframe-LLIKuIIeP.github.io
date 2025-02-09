@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="css/style.css" />
+		<title>Сайт</title>
+<header class="header">
+    <h1 class="header__title">
+        <img class="header__icon" src="img/home.svg" alt="Icon">
+        A-Frame | Дом отдыха
+    </h1>
+    <p class="header__text">Мы предлагаем вам современный и комфортный A-Frame с баней и купелью</p>
+
+    <!-- Навигационное меню -->
+    <nav class="nav">
+        <ul class="nav__list">
+            <li class="nav__item"><a href="../index.html" class="nav__link">Главная</a></li>
+            <li class="nav__item"><a href="../pages/price.html" class="nav__link">Стоимость</a></li>
+            <li class="nav__item"><a href="../pages/dates.html" class="nav__link">Свободные даты</a></li>
+            <li class="nav__item"><a href="#photos" class="nav__link">Фотографии</a></li>
+            <li class="nav__item"><a href="../pages/location.html" class="nav__link">Как добраться</a></li>
+            <li class="nav__item"><a href="#reviews" class="nav__link">Отзывы</a></li>
+            <li class="nav__item"><a href="#contacts" class="nav__link">Контакты</a></li>
+            <li class="nav__item nav__item--dropdown">
+                <a href="#programs" class="nav__link">Программы</a>
+                <ul class="nav__dropdown">
+                    <li class="nav__dropdown-item"><a href="#proposal" class="nav__dropdown-link">Предложение руки и сердца</a></li>
+                    <li class="nav__dropdown-item"><a href="#romantic" class="nav__dropdown-link">Романтическое свидание</a></li>
+                    <li class="nav__dropdown-item"><a href="#birthday" class="nav__dropdown-link">День рождения</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <!-- *** Навигационное меню ***-->
+
+</header>
+
+			<div class="contact">
+				<ul class="contact__list">
+					<li class="contact__item">
+						<a
+							class="contact__link"
+							target="_blank"
+							href="https://t.me/mrpencel"
+						>
+							<img
+								class="contact__icon"
+								src="./img/icon/05.svg"
+								alt="Telegram"
+							/>
+						</a>
+						<a
+							class="contact__link"
+							target="_blank"
+							href="https://vk.com/mr.pencel"
+						>
+							<img class="contact__icon" src="./img/icon/06.svg" alt="VK" />
+						</a>
+						<a
+							class="contact__link"
+							target="_blank"
+							href="https://wa.me/79152563969"
+						>
+							<img
+								class="contact__icon"
+								src="./img/icon/07.svg"
+								alt="WhatsApp"
+							/>
+						</a>
+					</li>
+					<!-- Новый элемент списка для номера телефона -->
+					<li class="contact__item contact__item--phone">
+						<div class="contact__phone">
+							<img class="contact__icon" src="./img/icon/08.svg" alt="Phone" />
+							<p class="contact__phone-number">+7 (915) 256-39-69</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+
+<!-- О нас -->
+    <section class="about" id="about">
+    <h2 class="about__title">О нас</h2>
+    <div class="about__content">
+        <p class="about__text">
+            Наш дом создавался с любовью и заботой, чтобы подарить вам незабываемые моменты отдыха. 
+            Мы использовали только качественные и экологичные материалы, чтобы обеспечить комфорт 
+            и безопасность для наших гостей.
+        </p>
+        <p class="about__text">
+            A-Frame — это не просто дом, это место, где вы сможете насладиться уютом, теплом 
+            и гармонией с природой. Каждая деталь интерьера продумана до мелочей, чтобы вы 
+            чувствовали себя как дома.
+        </p>
+        <p class="about__text">
+            Мы гордимся тем, что предлагаем вам не только комфортное проживание, но и уникальную 
+            атмосферу, которая поможет вам расслабиться и насладиться каждым моментом.
+        </p>
+    </div>
+</section>
+<!-- *** О нас *** -->
+
+<section class="pricing" id="price">
+    <h2 class="pricing__title">Стоимость проживания</h2>
+    <div class="pricing__cards">
+        <!-- Карточка для будних дней -->
+        <div class="pricing__card">
+            <h3 class="pricing__card-title">Воскресенье - Четверг</h3>
+            <p class="pricing__card-price">12 000₽ <span class="pricing__card-period">/ сутки</span></p>
+            <ul class="pricing__card-features">
+                <li class="pricing__card-feature">Проживание в доме</li>
+                <li class="pricing__card-feature">Доступ ко всем удобствам</li>
+                <li class="pricing__card-feature">Бесплатная парковка</li>
+            </ul>
+        </div>
+        <!-- *** Карточка для будних дней *** -->
+
+        <!-- Карточка для выходных дней -->
+        <div class="pricing__card">
+            <h3 class="pricing__card-title">Пятница - Суббота</h3>
+            <p class="pricing__card-price">15 000₽ <span class="pricing__card-period">/ сутки</span></p>
+            <ul class="pricing__card-features">
+                <li class="pricing__card-feature">Проживание в доме</li>
+                <li class="pricing__card-feature">Доступ ко всем удобствам</li>
+                <li class="pricing__card-feature">Бесплатная парковка</li>
+            </ul>
+        </div>
+        <!-- *** Карточка для выходных дней *** -->
+
+        <!-- Карточка для дополнительных услуг -->
+        <div class="pricing__card">
+            <h3 class="pricing__card-title">Дополнительные услуги</h3>
+            <ul class="pricing__card-features">
+                <li class="pricing__card-feature">Купель: 3 000₽</li>
+                <li class="pricing__card-feature">Баня: 3 000₽</li>
+            </ul>
+        </div>
+    </div>
+    <!-- *** Карточка для дополнительных услуг *** -->
+</section>
+
+
+				<div class="main__bonus">ЧТО ВХОДИТ:</div>
+
+				<div class="features">
+					<div class="features__item">
+						<div class="features__text features__text--1">
+							Душ, туалет, полотенца, фен, средства гигиены, одноразовые
+							тапочки, аптечка
+						</div>
+					</div>
+					<div class="features__item">
+						<div class="features__text features__text--2">
+							Варочная панель, микроволновка, электрочайник, холодильник,
+							кофеварка, чай, кофе, масло, сахар, специи и соль
+						</div>
+					</div>
+					<div class="features__item">
+						<div class="features__text features__text--3">
+							Парковка рядом с домом и WIFI на всей территории
+						</div>
+					</div>
+					<div class="features__item">
+						<div class="features__text features__text--4">
+							Решетки, шампуры, уголь, росжиг, спички, дрова
+						</div>
+					</div>
+				</div>
+<!-- Мы на карте -->
+<div class="map">
+  <div class="map__title">Мы на карте:</div>
+  <div class="map__container">
+    <iframe
+      class="map__iframe"
+      src="https://yandex.ru/map-widget/v1/?ll=39.101490%2C55.438946&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgo2MDk2Mjg3MDQyEoUB0KDQvtGB0YHQuNGPLCDQnNC-0YHQutC-0LLRgdC60LDRjyDQvtCx0LvQsNGB0YLRjCwg0LPQvtGA0L7QtNGB0LrQvtC5INC-0LrRgNGD0LMg0JXQs9C-0YDRjNC10LLRgdC6LCDQtNC10YDQtdCy0L3RjyDQoNGL0LbQtdCy0L4sIDHQkyIKDe1nHEIVe8FdQg%2C%2C&z=17.33"
+      width="880"
+      height="600"
+      frameborder="0"
+      allowfullscreen="true"
+      aria-label="Карта"
+    ></iframe>
+  </div>
+</div>
+<!-- *** Мы на карте *** -->
+			</main>
+
+			<footer class="footer">
+				<div class="footer__content">
+					<span class="footer__text"
+						>Информация на сайте не является публичной офертой, которая
+						определяется Статьёй 437 ГК РФ. Copyright © 2024</span
+					>
+				</div>
+			</footer>
+
+			<a class="scroll-top" href="#top">
+    ▲
+</a>
+		</div>
+	</body>
+</html>
+
